@@ -1,0 +1,81 @@
+.fondo{
+    background: linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.h-full{
+    height: 100vh;
+}
+
+.muro {
+    border: 2px solid rgb(115, 43, 19);
+    padding: 36px;
+    
+    background-color: rgb(255, 95, 42);
+}
+
+.camino {
+    border: 2px solid gray;
+    padding:  36px;
+    
+    background-color: aliceblue;
+}
+
+.raton{
+    padding:  36px;
+    
+    border: 2px solid black;
+    background: url('img/mouse-303588.png') top center;
+    background-size:cover;
+}
+
+.queso{
+    padding: 36px;
+    border: 2px solid black;
+    background: url('img/cheese_PNG25282.png') top center;
+    background-size: cover;
+}
+
+.menu{
+    margin: 6%;
+    font-size: 30px;
+    color: rgb(64, 64, 64);  
+    text-shadow: 0.1em 0.1em 0.2em rgb(95, 95, 95);
+}
+
+.options select{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+}
+
+.options select option{
+
+}
+
+/* a {
+    display: block;
+    float: left;
+} */
+
+#lab{
+    display: flex;
+}
+
+a{
+    padding: 10px 15px;
+}
+
+/* #lab{
+    display: block;
+} */
