@@ -16,20 +16,20 @@
 
 .muro {
     border: 2px solid rgb(115, 43, 19);
-    padding: 36px;
+    padding: 30px;
     
     background-color: rgb(255, 95, 42);
 }
 
 .camino {
     border: 2px solid gray;
-    padding:  36px;
+    padding:  30px;
     
     background-color: aliceblue;
 }
 
 .raton{
-    padding:  36px;
+    padding:  30px;
     
     border: 2px solid black;
     background: url('img/mouse-303588.png') top center;
@@ -37,7 +37,7 @@
 }
 
 .queso{
-    padding: 36px;
+    padding: 30px;
     border: 2px solid black;
     background: url('img/cheese_PNG25282.png') top center;
     background-size: cover;
