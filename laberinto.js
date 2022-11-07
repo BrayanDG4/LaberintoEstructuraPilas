@@ -96,10 +96,7 @@ class Laberinto {
     }
     async resolver(x, y) {
 
-        // setTimeout(() => {
-
-
-        // console.log(x + ' ' + y)
+       
 
         if (x == this.array.length - 1 & y == this.array[0].length - 1) {
             this.pila.append([x, y])
@@ -113,12 +110,10 @@ class Laberinto {
             this.array[x][y] = 2
 
             this.pila.append([x, y])
-            // console.log(this.pila.tope)
-
-            // this.print()
-            // muro
+        
 
             // console.log(x + " " + y)
+            //
             if (y + 1 < this.array[0].length) {
                 if (this.array[x][y + 1] == 0) {
                     if (await this.resolver(x, y + 1)) {
@@ -128,7 +123,7 @@ class Laberinto {
                 }
             }
 
-
+            
             if (x + 1 < this.array.length) {
                 if (this.array[x + 1][y] == 0) {
                     if (await this.resolver(x + 1, y)) {
@@ -160,17 +155,11 @@ class Laberinto {
             }
 
 
-            this.array[x][y] = 0
+            this.array[x][y] = 0;
             this.pila.desapilar()
-            // if ()
-            // this.movimientos.pop()
-        }
-        else {
 
-            // console.log(this.pila.tope)
         }
         return false
-        // }, 5000);
     }
 
     async print() {
@@ -204,6 +193,7 @@ class Laberinto {
                     if (i == nodo.value[0] && j == nodo.value[1]) {
                         a.classList.add('raton')
                         a.classList.remove('queso')
+                        console.log("valor: "+nodo.value[0] + " y "+nodo.value[1])
                         // console.log(nodo)
                     }
                     else if (this.array[i][j] == 2 | this.array[i][j] == 0) {
@@ -232,22 +222,12 @@ class Laberinto {
     }
 
     async mostrar() {
-        // setTimeout(() => {
         await this.resolver(0, 0)
         await this.print()
         console.log(lab.pila)
-
-
-        // }, 1000);
     }
 }
 
 const lab = new Laberinto()
 const maps = new Maps()
 lab.mostrar()
-
-// lab.print()
-
-
-
-// lab.print()
