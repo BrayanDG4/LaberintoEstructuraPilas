@@ -50,18 +50,22 @@
     text-shadow: 0.1em 0.1em 0.2em rgb(95, 95, 95);
 }
 
-.options select{
-    width: 100%;
+.button a{
+    text-decoration: none;
+    color: rgb(59, 59, 59);
     padding: 10px;
-    font-size: 16px;
-    letter-spacing: 0.3rem;
-    font-weight: bold;
-    color: rgb(68, 68, 68);
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: aliceblue;
+    transition: .5s;
 }
 
-.options select option{
-
+.button a:hover{
+    background-color: rgb(176, 183, 189);
+    transition: .5s;
+    padding: 12px;
 }
+
 
 /* a {
     display: block;

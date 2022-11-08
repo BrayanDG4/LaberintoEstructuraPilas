@@ -47,14 +47,22 @@ class Pila {
         }
     }
 }
-class Maps{
-    constructor(){
-        this.maps = [
+class Laberinto {
+    constructor() {
+        this.maps = [[
             [0, 1, 1, 1, 1],
             [0, 1, 1, 1, 1],
             [0, 0, 0, 0, 0],
             [0, 1, 0, 1, 0],
             [0, 1, 1, 0, 0],
+            [0, 0, 0, 0, 0]
+        ],
+        [
+            [0, 1, 1, 1, 1],
+            [0, 0, 0, 0, 0],
+            [1, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 1],
             [0, 0, 0, 0, 0]
         ],
         [
@@ -68,32 +76,17 @@ class Maps{
             [1,1,0,0,0,0,0,0,0,0],
             [1,1,1,1,1,1,0,1,1,0],
             [1,1,1,1,1,1,1,1,1,0],
-        ];
-    }
+        ]];
 
-    getMaps(i){
-        return this.maps[i];
-    }
-}
-
-class Laberinto {
-    constructor() {
-        this.array = [
-            [0,0,1,1,1,1,1,1,1,1],
-            [1,0,1,1,1,1,1,1,1,1],
-            [1,0,0,0,0,0,0,0,0,1],
-            [1,1,1,1,1,1,1,0,1,1],
-            [1,1,0,0,0,0,1,0,1,1],
-            [1,1,0,1,1,0,0,0,1,1],
-            [1,1,0,1,1,1,1,1,1,1],
-            [1,1,0,0,0,0,0,0,0,0],
-            [1,1,1,1,1,1,0,1,1,0],
-            [1,1,1,1,1,1,1,1,1,0]
-        ];
-
+        this.array = this.maps[this.getMaps()];
 
         this.pila = new Pila()
     }
+
+    getMaps(){
+        return Math.round(Math.random()*2);
+    }
+
     async resolver(x, y) {
 
        
@@ -229,5 +222,4 @@ class Laberinto {
 }
 
 const lab = new Laberinto()
-const maps = new Maps()
 lab.mostrar()
